@@ -1,0 +1,8 @@
+.nigaoe,.setsumei{
+    transition: all 10s ease;
+    opacity: 1;
+}
+.nigaoe.hide,.setsumei.hide{
+    transition: all 10s ease;
+    opacity:0;
+}
