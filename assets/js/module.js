@@ -7,19 +7,40 @@ $("#top").on("click",function(){
 })
 
 // スクロールしたら右から画像と説明文がスライドしてくる
+
+let windowheight = $(window).height();
+// ↑画面の高さを取得している。
 $(window).on("scroll",function(){
     let windowTop = $(window).scrollTop();
-    let position = $(".nigaoe").offset().top;
-    let windowheight = $(window).height();
-    console.log(position);
+    // ↑画面の一番左上の場所を取得している
+    $(".oya").each(function(){
+        let position = $(this).offset().top;
+        // ↑要素（それぞれのoya）の左上の場所を取得している
+        if(position < windowTop + windowheight){
+            $(this).removeClass("hide");
+            }else{
+            $(this).addClass("hide");
+            }
+    })
 
-if(position < windowTop + windowheight){
-    $(".nigaoe,.setsumei").removeClass("hide");
-}else{
-    $(".nigaoe,.setsumei").addClass("hide");
-}
+})
 
+// ハンバーガーメニューを押したらメニューが右に向かって開く
+$(".hamburger").on("click",function(){
+    $(this).toggleClass("active");
+ 
+    if ($(this).hasClass("active")) {
+           $("header-right").addClass('active');
+    } else {
+         $("header-right").removeClass('active');
+    }
+    });
+
+
+
+
+
+// ↓一番外のものだから消しちゃダメ！
 })
 
 
-})
