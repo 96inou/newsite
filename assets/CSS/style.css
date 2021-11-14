@@ -1,3 +1,12 @@
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+img{
+  max-width: 100%;
+}
+
 .leftheader{
   display: flex;
   align-items: center;
@@ -18,6 +27,25 @@
   background: url('../img/img01.png') repeat-y top right / 100%;
 }
 
+@media screen and (max-width: 768px) {
+  .leftheader{
+    display: block;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .leftheader::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: url('../img/img02.png') repeat-x left /1080px auto;
+  }
+}
+
 .header-wrapper{
   width: 130px;
   padding: 33px;
@@ -28,9 +56,33 @@
   justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  .header-wrapper{
+    width: 100%;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .icon-wrapper{
+    width: 40px;
+  }
+}
+
 nav{
   width: 130px;
   text-align: center;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  nav{
+    width: 100%;
+    background: white;
+    padding-top: 50px;
+  }
 }
 
 .nav_item{
@@ -41,6 +93,12 @@ nav{
   text-decoration: none;
   color: #000;
   font-size: 14px;
+  transition: all .5s ease;
+}
+
+.nav_item a:hover{
+  color: #c3974a;
+  transition: all .5s ease;
 }
 
 .nav_item span{
@@ -58,15 +116,36 @@ nav{
   margin-left: 129px;
 }
 
+@media screen and (max-width: 768px) {
+  .content{
+    margin-left: 0;
+  }
+}
+
 .content-inner{
   max-width: 1024px;
   margin: 0 auto;
+  padding: 0 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .content-inner{
+    max-width: 100%;
+    padding: 0 15px;
+  }
 }
 
 .card{
-  width: 600px;
+  width: 58.5%;
   margin: 200px auto;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .card{
+    width: 86.5%;
+    margin: 100px auto;
+  }
 }
 
 .friend_name{
@@ -81,7 +160,12 @@ nav{
 
 .container{
   display: flex;
-  align-items: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  .container{
+    display: block;
+  }
 }
 
 .link_group{
@@ -100,10 +184,49 @@ nav{
   margin: 0 15px;
 }
 
+@media screen and (max-width: 768px) {
+  .link_groupTitle{
+    font-size: 50px;
+    width: auto;
+    text-align: center;
+  }
+
+  .link_item{
+    width: 100%;
+    margin: 100px 0;
+  }
+}
+
+.link_item_frame{
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.link_item img{
+  transition: all .5s ease;
+}
+
+.link_item img:hover{
+  transform: scale(1.2);
+  transition: all .5s ease;
+}
+
+.link_item_text{
+  margin-top: 15px;
+}
+
+.link_item_text a:hover{
+  color: #c3974a;
+  transition: all .5s ease;
+}
+
 .archive{
   text-align: center;
   display: block;
-  margin: 100px auto;
+  margin: 100px auto 0;
 }
 
 footer{
@@ -113,6 +236,12 @@ footer{
   position: relative;
 }
 
+@media screen and (max-width: 768px) {
+  footer{
+    margin-left: 0;
+  }
+}
+
 footer::before{
   content: '';
   position: absolute;
@@ -120,5 +249,5 @@ footer::before{
   left: 0;
   width: 100%;
   height: 3px;
-  background: url('../img/img02.png') top / 100%;
+  background: url('../img/img02.png') repeat-x left /1080px auto;
 }
