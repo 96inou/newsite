@@ -1,3 +1,21 @@
+* { font-family: "M PLUS Rounded 1c"; }
+
+.card{
+  margin: 0 auto;
+  /* width: 300px; */
+  text-align: center;
+  margin-top: 100px;
+  transition: all 3s ease;
+  transform: translateX(0%);
+  opacity:1;
+}
+
+.card.hide{
+  transition: all 3s ease;
+  opacity:0;
+  transform: translateX(100%);
+}
+
 a{
   text-decoration: none;
   color: #000;
@@ -108,8 +126,10 @@ nav{
 
 .mainTitle{
   text-align: center;
-  font-size: 80px;
-  margin-top: 200px;
+  margin-top: 100px;
+  width: 1000px;
+  height: auto;
+  margin-left: 10px;
 }
 
 .content{
@@ -251,3 +271,4 @@ footer::before{
   height: 3px;
   background: url('../img/img02.png') repeat-x left /1080px auto;
 }
+
