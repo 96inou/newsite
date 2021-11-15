@@ -30,10 +30,10 @@ $(function(){
         $('nav').slideToggle();
 
         $(".hamburger").toggleClass("on");
-    
-    
     })
     
+    // ページをリフレッシュしたらトップ画像が下からスライドしてくる
+
     
     
     // ↓一番外のものだから消しちゃダメ！

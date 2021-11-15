@@ -3,6 +3,10 @@
   color: rgb(165, 34, 78);
 }
 
+.mainTitle{
+  
+}
+
 .card{
   margin: 0 auto;
   width: 300px;
@@ -274,8 +278,16 @@ nav{
   }
 }
 
-.link_item_frame{
+.link-item-wrap{
   display: block;
+}
+
+.link-item-wrap:hover{
+  color: #c3974a;
+  transition: all .5s ease;
+}
+
+.link_item_frame{
   width: 200px;
   height: 200px;
   margin: 0 auto;
@@ -295,10 +307,10 @@ nav{
   margin-top: 15px;
 }
 
-.link_item_text a:hover{
+/* .link_item_text a:hover{
   color: #c3974a;
   transition: all .5s ease;
-}
+} */
 
 .archive{
   text-align: center;
