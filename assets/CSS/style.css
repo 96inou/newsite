@@ -3,10 +3,6 @@
   color: rgb(165, 34, 78);
 }
 
-.mainTitle{
-
-}
-
 .card{
   margin: 0 auto;
   width: 300px;
@@ -329,6 +325,11 @@ nav{
   text-align: center;
   display: block;
   margin: 100px auto 0;
+}
+
+.archive:hover{
+  color: #c3974a;
+  transition: all .5s ease;
 }
 
 footer{
