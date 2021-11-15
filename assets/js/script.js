@@ -14,6 +14,7 @@ $(function(){
         var position = $(href).offset().top;
         $("body,html").animate({scrollTop: position-80},500);
         $("nav").slideUp(100);
+        $(".hamburger").removeClass("on");
     
     })
 
