@@ -48,6 +48,56 @@ img{
   background: url('../img/img01.png') repeat-y top right / 100%;
 }
 
+/* ハンバーガーメニュー */
+.hamburger{
+  width: 28px;
+  height: 30px;
+  margin: 30px auto 10px;
+}
+.hamburger .pate,
+.hamburger .pate::before,
+.hamburger .pate::after{
+  width: 100%;
+  height: 1px;
+  background-color: rgb(165, 34, 78);
+  border-radius: 2px;
+  display: block;
+  transition: all .5s ease;
+}
+
+.hamburger .pate{
+  position: relative;
+  top: calc(50% - 2px);
+}
+
+.hamburger .pate::before,
+.hamburger .pate::after{
+  content: '';
+  position: absolute;
+}
+
+.hamburger .pate::before{
+top: -9px;
+}
+
+.hamburger .pate::after{
+  top: 9px
+}
+
+/* ハンバーガーの変更をする部分 */
+.hamburger:hover .pate{
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hamburger:hover .pate::before{
+  transform: rotate(45deg) translate(5px,5px);
+}
+
+.hamburger:hover .pate::after{
+  transform: rotate(-45deg) translate(7px,-8px);
+}
+
 @media screen and (max-width: 768px) {
   .leftheader{
     display: block;
