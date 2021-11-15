@@ -33,7 +33,22 @@ $(function(){
     })
     
     // ページをリフレッシュしたらトップ画像が下からスライドしてくる
-
+    function load_effect(){
+        var tt = $(window).scrollTop();
+        var hh = $(window).height();
+        $('.load-fade').each(function(){
+            var yy = $(this).offset().top;
+            if (tt > yy - hh){
+                $(this).addClass('done');
+            }
+        });
+        $('.load-up').each(function(){
+            var yy = $(this).offset().top;
+            if (tt > yy - hh){
+                $(this).addClass('done');
+            }
+        });
+    }
     
     
     // ↓一番外のものだから消しちゃダメ！
