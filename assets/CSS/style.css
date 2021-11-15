@@ -52,7 +52,6 @@ img{
 .hamburger{
   width: 28px;
   height: 30px;
-  margin: 30px auto 10px;
 }
 .hamburger .pate,
 .hamburger .pate::before,
@@ -85,16 +84,16 @@ top: -9px;
 }
 
 /* ハンバーガーの変更をする部分 */
-.hamburger:hover .pate{
+.hamburger.on .pate{
   background-color: transparent;
   cursor: pointer;
 }
 
-.hamburger:hover .pate::before{
+.hamburger.on .pate::before{
   transform: rotate(45deg) translate(5px,5px);
 }
 
-.hamburger:hover .pate::after{
+.hamburger.on .pate::after{
   transform: rotate(-45deg) translate(7px,-8px);
 }
 
@@ -125,6 +124,7 @@ top: -9px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -225,10 +225,14 @@ nav{
   font-size: 30px;
   margin-bottom: 30px;
 }
+.introduction{
+    overflow-x: hidden;
+}
 
 .introduction-text{
   margin-top: 30px;
   font-size: 18px;
+  text-align: left;
 }
 
 .container{

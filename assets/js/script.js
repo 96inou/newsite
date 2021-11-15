@@ -22,6 +22,15 @@ $(function(){
                 $(this).addClass("hide");
                 }
         })
+    })
+
+    // ハンバーガーを押したらバーがクロスする
+
+    $('.hamburger').on("click",function(){
+        $('nav').slideToggle();
+
+        $(".hamburger").toggleClass("on");
+    
     
     })
     
