@@ -1,8 +1,11 @@
-* { font-family: "M PLUS Rounded 1c"; }
+* {
+  font-family: "M PLUS Rounded 1c";
+  color: rgb(165, 34, 78);
+}
 
 .card{
   margin: 0 auto;
-  /* width: 300px; */
+  width: 300px;
   text-align: center;
   margin-top: 100px;
   transition: all 3s ease;
@@ -13,7 +16,7 @@
 .card.hide{
   transition: all 3s ease;
   opacity:0;
-  transform: translateX(100%);
+  transform: translateX(50%);
 }
 
 a{
