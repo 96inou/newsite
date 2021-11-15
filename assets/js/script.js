@@ -1,11 +1,23 @@
 $(function(){
 
 
-    // // アイコンの画像を押したら一番上に戻る
-    // $("#top").on("click",function(){
-    //     $("body,html").animate({scrollTop: 0},500);
-    // })
+    // // アイコンの画像を押したら一番上に戻るアニメーション
+    $(".hanaimg").on("click",function(){
+        $("body,html").animate({scrollTop: 0},500);
+    })
+
+    // リンクを押したら動きをつけて移動する
+    $(".nav_item a").on("click",function(event){
+        event.preventDefault();
+        var href = $(this).attr("href");
+        console.log(href);
+        var position = $(href).offset().top;
+        $("body,html").animate({scrollTop: position-80},500);
+        $("nav").slideUp(100);
     
+    })
+
+
     // スクロールしたら右から画像と説明文がスライドしてくる
     
     let windowheight = $(window).height();
@@ -33,22 +45,7 @@ $(function(){
     })
     
     // ページをリフレッシュしたらトップ画像が下からスライドしてくる
-    function load_effect(){
-        var tt = $(window).scrollTop();
-        var hh = $(window).height();
-        $('.load-fade').each(function(){
-            var yy = $(this).offset().top;
-            if (tt > yy - hh){
-                $(this).addClass('done');
-            }
-        });
-        $('.load-up').each(function(){
-            var yy = $(this).offset().top;
-            if (tt > yy - hh){
-                $(this).addClass('done');
-            }
-        });
-    }
+        $(".mainTitle").removeClass("up");
     
     
     // ↓一番外のものだから消しちゃダメ！

@@ -4,7 +4,7 @@
 }
 
 .mainTitle{
-  
+
 }
 
 .card{
@@ -15,6 +15,7 @@
   transition: all 3s ease;
   transform: translateX(0%);
   opacity:1;
+  display: flex;
 }
 
 .card.hide{
@@ -237,6 +238,7 @@ nav{
   margin-top: 30px;
   font-size: 18px;
   text-align: left;
+  line-height: 2;
 }
 
 .container{
@@ -352,3 +354,14 @@ footer::before{
   background: url('../img/img02.png') repeat-x left /1080px auto;
 }
 
+.mainTitle{
+  transition: all 3s ease;
+  transform: translateY(0%);
+  opacity:1;
+}
+
+.mainTitle.up{
+  transition: all 3s ease;
+  opacity:0;
+  transform: translateY(50%);
+}
